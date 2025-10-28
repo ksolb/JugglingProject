@@ -19,17 +19,12 @@ public class ValidPattern {
         for (int i = 0; i < validPattern.length(); i++) {
             char c = validPattern.charAt(i);
 
-            for (int k = 0; k < validPattern.length(); k++) {
-                if ( i == k) {
-                     continue;
-                }
-                if ( c == validPattern.charAt(k)) {
-                    result = -1;
-                    break;
-                } else {
-                    result = 1;
-                }
+            if (validPattern.indexOf(c) != validPattern.lastIndexOf(c)) {
+                result = -1;
+                break;
             }
+            result = 1;
+
         }
         return result;
     }

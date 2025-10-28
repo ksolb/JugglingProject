@@ -26,5 +26,4 @@ class ValidPatternTest {
         int result = vp.isValidPattern(input);
         Assertions.assertEquals(-1, result);
     }
-
 }
