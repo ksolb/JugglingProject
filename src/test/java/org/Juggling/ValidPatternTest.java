@@ -9,10 +9,15 @@ class ValidPatternTest {
 
     ValidPattern vp = new ValidPattern();
     String input = "";
+
     @Test
     void validPatternTest() {
         input = "531";
         int result = vp.isValidPattern(input);
+        Assertions.assertEquals(1, result);
+
+        input = "441";
+        result = vp.isValidPattern(input);
         Assertions.assertEquals(1, result);
     }
     @Test
